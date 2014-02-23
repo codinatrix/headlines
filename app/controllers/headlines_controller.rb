@@ -1,7 +1,6 @@
 class HeadlinesController < ApplicationController
 
-  # GET /headlines
-  def index
+    def index
     @headlines = Headline.all
     @headline = Headline.new
   end
@@ -16,9 +15,9 @@ class HeadlinesController < ApplicationController
     @headline = Headline.new(headline_params)
 
     if @headline.save
-      redirect_to :root, notice: 'Headline was successfully created.'
+      redirect_to :root
     else
-      render action: 'new'
+      render action: 'index'
     end
   end
 

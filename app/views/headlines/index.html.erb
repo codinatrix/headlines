@@ -1,14 +1,16 @@
 <div class='container'>
 <h1>
-Powerful headlines
+Powerful Headlines
 </h1>
 <h2>
 Tell the world what you do for your customers in 100 characters or less.
 </h2>
+<div class="transparent_bg">
 <p>When someone arrives at your website, they will spend less than two seconds deciding if your product or service is for them.
 If you don't offer them something within that time, they will leave. A clear headline describing what you offer does not only
 entice customers. It says that you respect them and value their time enough to be upfront and honest right from the start.</p>
-<div class='form-container'>
+</div>
+<div class='container'>
 
 <%= form_for@headline, :remote => true, :authenticity_token => true do |f| %>
   <% if @headline.errors.any? %>
@@ -23,11 +25,13 @@ entice customers. It says that you respect them and value their time enough to b
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.text_area :content, :required => true, :placeholder => 'Your powerful headline' %>
+  <div class="row">
+  <div class="field col-md-10">
+    <%= f.text_area :content, :required => true, :placeholder => 'Your powerful headline', :rows => 1 %>
   </div>
-  <div class="field">
+  <div class="field col-md-2">
     <%= f.text_field :company, :required => true, :placeholder => 'Company or product' %>
+  </div>
   </div>
   <div class="actions">
     <%= f.submit 'Tell the world'%>
@@ -39,7 +43,7 @@ entice customers. It says that you respect them and value their time enough to b
 <% @headlines.each do |headline| %>
  
    <li><%= headline.content %>
-    <%= headline.company %></li>
+    <span class="company_name">-<%= headline.company %></span></li>
   </tr>
 <% end %>
 </ul>

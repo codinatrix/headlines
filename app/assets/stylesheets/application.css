@@ -11,3 +11,144 @@
  *= require_self
  *= require_tree .
  */
+
+
+/*
+ * body { 
+	width: 100%;
+	height:100%;
+	font-family: 'Open Sans', sans-serif;
+	background: #092756;
+	background: -moz-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%),-moz-linear-gradient(top,  rgba(57,173,219,.25) 0%, rgba(42,60,87,.4) 100%), -moz-linear-gradient(-45deg,  #670d10 0%, #092756 100%);
+	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -webkit-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -webkit-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+	background: -o-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -o-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -o-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+	background: -ms-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), -ms-linear-gradient(top,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), -ms-linear-gradient(-45deg,  #670d10 0%,#092756 100%);
+	background: -webkit-radial-gradient(0% 100%, ellipse cover, rgba(104,128,138,.4) 10%,rgba(138,114,76,0) 40%), linear-gradient(to bottom,  rgba(57,173,219,.25) 0%,rgba(42,60,87,.4) 100%), linear-gradient(135deg,  #670d10 0%,#092756 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3E1D6D', endColorstr='#092756',GradientType=1 );
+}
+ */
+
+body {
+	background-image: url('/img/path_bg.jpg');
+	color: #FFFFFF;
+	text-align: center;
+	text-shadow: 3px 3px 12px rgba(0, 0, 0, 1), -4px -4px 12px rgba(0, 0, 0, 1);
+	font: 400 16px/1.6 'Muli', Verdana, Helvetica, sans-serif;
+}
+
+::-webkit-input-placeholder {
+   color: #FFFFFF;
+   opacity: 1;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #FFFFFF;
+   opacity: 1;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #FFFFFF;  
+   opacity: 1;
+}
+
+:-ms-input-placeholder {  
+   color: #FFFFFF;  
+   opacity: 1;
+}
+
+
+.container:first-of-type {
+	margin-top: 100px;
+}
+
+h1 {
+	font: 400 70px/1.2 'Cantata One', Georgia, serif;
+	font-size: 3em;
+}
+
+h2 {
+	margin-bottom: 100px;
+}
+
+.transparent_bg {
+	background-color:rgba(255,255,255,0.8);
+}
+
+p {
+	color: #000000;
+	padding: 20px;
+	font-size: 2em;
+	display: none;
+}
+
+input, textarea { 
+	outline: none;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;
+	transition: all 0.5s ease-in-out;
+}
+
+input[type="text"], textarea {
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	border-style: none none solid;
+	color: #FFFFFF;
+	height: 43px;
+}
+
+textarea {
+	width: 100%;
+	resize: none;
+	overflow: hidden;
+}
+
+input[type=submit] {
+	margin-top: 40px;
+	display: inline-block;
+	background-color: #BAC8E0;
+	 
+	color: #eeeeee;
+	font-size: 1.5em;
+	font-weight: bold;
+ 	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+ 	
+	box-shadow: 0 0 25px 1px rgba(0,0,0,0.2), 0 15px 25px 1px rgba(0,0,0,0.1), 0 30px 16px 0 rgba(0,0,0,0.15);
+ 	padding: 9px 14px;
+ 	line-height: 18px; 
+ 	vertical-align: middle; 
+ 	border: none;
+ 	border-bottom: 4px solid #93AFE0;
+ 
+  	-webkit-border-radius: 4px; 
+ 	-moz-border-radius: 4px; 
+ 	border-radius: 4px;
+}
+
+input[type=submit]:hover, input[type=submit]:active, input[type=submit][disabled] { background-color: #4a77d4; border-bottom: 4px solid #4C6690;}
+
+input[type=submit]:active {
+  position: relative;
+  top: 1px;
+  border-bottom: 4px solid #384B6B;
+}
+
+input:invalid, textarea:invalid { 
+	box-shadow: none; 
+}
+
+input[type="text"]:focus, textarea:focus, input[type="text"]:invalid:focus, textarea:invalid:focus { 
+	box-shadow: 0 5px 7px -5px rgba(255, 255, 255, 1); 
+}
+
+ul {
+	margin-top: 60px;
+	font-size: 2em;
+	list-style-type: none;
+	text-align: left;
+}
+
+.company_name {
+	font-size:.8em;
+	margin-left: 10px;
+}
