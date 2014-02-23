@@ -29,7 +29,8 @@
  */
 
 body {
-	background-image: url('/img/path_bg.jpg');
+	background-image: url('/img/lake_mntn_bg.jpg');
+	background-position: center;
 	color: #FFFFFF;
 	text-align: center;
 	text-shadow: 3px 3px 12px rgba(0, 0, 0, 1), -4px -4px 12px rgba(0, 0, 0, 1);
@@ -39,21 +40,25 @@ body {
 ::-webkit-input-placeholder {
    color: #FFFFFF;
    opacity: 1;
+   text-shadow: 3px 3px 12px rgba(0, 0, 0, 1), -4px -4px 12px rgba(0, 0, 0, 1);
 }
 
 :-moz-placeholder { /* Firefox 18- */
    color: #FFFFFF;
    opacity: 1;  
+   text-shadow: 3px 3px 12px rgba(0, 0, 0, 1), -4px -4px 12px rgba(0, 0, 0, 1);
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
    color: #FFFFFF;  
    opacity: 1;
+   text-shadow: 3px 3px 12px rgba(0, 0, 0, 1), -4px -4px 12px rgba(0, 0, 0, 1);
 }
 
 :-ms-input-placeholder {  
    color: #FFFFFF;  
    opacity: 1;
+   text-shadow: 3px 3px 12px rgba(0, 0, 0, 1), -4px -4px 12px rgba(0, 0, 0, 1);
 }
 
 
@@ -88,6 +93,7 @@ input, textarea {
 	-o-transition: all 0.5s ease-in-out;
 	-ms-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;
+	font-size: 1.2em;
 }
 
 input[type="text"], textarea {
@@ -106,7 +112,7 @@ textarea {
 input[type=submit] {
 	margin-top: 40px;
 	display: inline-block;
-	background-color: #BAC8E0;
+	background-color: #D38A3F;
 	 
 	color: #eeeeee;
 	font-size: 1.5em;
@@ -118,7 +124,7 @@ input[type=submit] {
  	line-height: 18px; 
  	vertical-align: middle; 
  	border: none;
- 	border-bottom: 4px solid #93AFE0;
+ 	border-bottom: 4px solid #9F6B33;
  
   	-webkit-border-radius: 4px; 
  	-moz-border-radius: 4px; 
@@ -143,9 +149,10 @@ input[type="text"]:focus, textarea:focus, input[type="text"]:invalid:focus, text
 
 ul {
 	margin-top: 60px;
-	font-size: 2em;
+	
 	list-style-type: none;
 	text-align: left;
+	font: 400 2.2em 'Cantata One', Georgia, serif;
 }
 
 .company_name {
