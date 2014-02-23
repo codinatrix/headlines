@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @headline.content %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @headline.company %>
+</p>
+
+<%= link_to 'Edit', edit_headline_path(@headline) %> |
+<%= link_to 'Back', headlines_path %>
