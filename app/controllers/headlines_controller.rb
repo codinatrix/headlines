@@ -16,7 +16,7 @@ class HeadlinesController < ApplicationController
     @headline = Headline.new(headline_params)
 
     if @headline.save
-      redirect_to @headline, notice: 'Headline was successfully created.'
+      redirect_to :root, notice: 'Headline was successfully created.'
     else
       render action: 'new'
     end

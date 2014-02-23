@@ -10,7 +10,7 @@ If you don't offer them something within that time, they will leave. A clear hea
 entice customers. It says that you respect them and value their time enough to be upfront and honest right from the start.</p>
 <div class='form-container'>
 
-<%= form_for(@headline) do |f| %>
+<%= form_for@headline, :remote => true, :authenticity_token => true do |f| %>
   <% if @headline.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@headline.errors.count, "error") %> prohibited this headline from being saved:</h2>
