@@ -1,7 +1,9 @@
 class HeadlinesController < ApplicationController
+  
+    respond_to :json, :html
 
-    def index
-    @headlines = Headline.all
+  def index
+    @headlines = Headline.all.order(created_at: :desc)
     @headline = Headline.new
   end
 
@@ -13,12 +15,8 @@ class HeadlinesController < ApplicationController
   # POST /headlines
   def create
     @headline = Headline.new(headline_params)
-
-    if @headline.save
-      redirect_to :root
-    else
-      render action: 'index'
-    end
+    @headline.save
+    respond_with(@headline, :location => root_url )
   end
 
 
