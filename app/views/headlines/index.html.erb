@@ -12,7 +12,7 @@ entice customers. It says that you respect them and value their time enough to b
 </div>
 <div class='container'>
 
-<%= form_for @headline, :remote => true, :authenticity_token => true do |f| %>
+<%= form_for @headline, :remote => true, :authenticity_token => true, :html => { :data_type => 'json' } do |f| %>
   <% if @headline.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@headline.errors.count, "error") %> prohibited this headline from being saved:</h2>
