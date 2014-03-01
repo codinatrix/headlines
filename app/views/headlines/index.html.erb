@@ -41,9 +41,6 @@ entice customers. It says that you respect them and value their time enough to b
 
 <ul>
 <% @headlines.each do |headline| %>
- 
-   <li><%= headline.content %>
-    <span class="company_name">-<%= headline.company %></span></li>
-  </tr>
+	<%= render headline %>
 <% end %>
 </ul>
