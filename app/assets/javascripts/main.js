@@ -1,4 +1,7 @@
 $(document)
+	.delegate('form[data-remote]', 'ajax:beforeSend', function(){
+		$(".alert").fadeTo(200, 0);
+	})
 	.delegate('form[data-remote]', 'ajax:success', function(e, data, status, xhr){
 		var li = $("ul").children(":first").clone();
 		li.children(":first").text(data['content']);
@@ -8,8 +11,15 @@ $(document)
 		last_li.remove();
 		
 		li.prependTo("ul").hide().slideDown("slow");
-		var test = 1;
 	})
 	.delegate('form[data-remote]', 'ajax:error', function(e, data, status, error) {
-		alert('error');
+		var error_el = $(".alert").first();
+		var response = $.parseJSON(data.responseText)['errors'];
+		for(var key in response) {
+			error_el.text('Headline ' + response[key]);
+			break;
+		}
+		$(".alert").fadeTo(200, 1);
+
 	});
+

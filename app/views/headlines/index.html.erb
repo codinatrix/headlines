@@ -6,25 +6,16 @@ Powerful Headlines
 Tell the world what you do for your customers in 100 characters or less.
 </h2>
 <div class="transparent_bg">
-<p>When someone arrives at your website, they will spend less than two seconds deciding if your product or service is for them.
+<p id="page_desc">When someone arrives at your website, they will spend less than two seconds deciding if your product or service is for them.
 If you don't offer them something within that time, they will leave. A clear headline describing what you offer does not only
 entice customers. It says that you respect them and value their time enough to be upfront and honest right from the start.</p>
 </div>
 <div class='container'>
 
+<p class="alert alert-danger hideme"></p>
+
 <%= form_for @headline, :remote => true, :authenticity_token => true, :html => { :data_type => 'json' } do |f| %>
-  <% if @headline.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@headline.errors.count, "error") %> prohibited this headline from being saved:</h2>
-
-      <ul>
-      <% @headline.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+ 
   <div class="row">
   <div class="field col-md-10">
     <%= f.text_area :content, :required => true, :placeholder => 'Your powerful headline', :rows => 1 %>

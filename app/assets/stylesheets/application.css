@@ -32,6 +32,10 @@ body {
 	font: 400 16px/1.6 'Muli', Verdana, Helvetica, sans-serif;
 }
 
+.hideme {
+	opacity: 0;
+}
+
 ::-webkit-input-placeholder {
    color: #FFFFFF;
    opacity: 1;
@@ -86,7 +90,7 @@ h2 {
 	background-color:rgba(255,255,255,0.8);
 }
 
-p {
+#page_desc {
 	color: #000000;
 	padding: 20px;
 	font-size: 2em;
@@ -169,4 +173,9 @@ ul {
 .company_name {
 	font-size:.8em;
 	margin-left: 10px;
+}
+
+.alert {
+	display: inline;
+	height: 178px;
 }
