@@ -1,9 +1,9 @@
 class HeadlinesController < ApplicationController
   
-    respond_to :json, :html
+  respond_to :json, :html
 
   def index
-    @headlines = Headline.all.order(created_at: :desc)
+    @headlines = Headline.all
     @headline = Headline.new
   end
 
