@@ -25,7 +25,7 @@
  
 
 body {
-	background-image: url('/img/path_bg.jpg');
+	background-image: url('/img/crystal.jpg');
 	background-position: center;
 	color: #FFFFFF;
 	text-align: center;
@@ -178,4 +178,9 @@ ul {
 .alert {
 	display: inline;
 	height: 178px;
+}
+
+
+.pagination a{
+	color: #FFFFFF;
 }
