@@ -56,23 +56,6 @@ body {
    opacity: 1;
 }
 
-textarea::-webkit-input-placeholder {
-   font-size: 2em;
-}
-
-textarea:-moz-placeholder { /* Firefox 18- */
-   font-size: 2em;
-}
-
-textarea::-moz-placeholder {  /* Firefox 19+ */
-   font-size: 2em;
-}
-
-textarea:-ms-input-placeholder {  
-   font-size: 2em;
-}
-
-
 .container:first-of-type {
 	margin-top: 100px;
 }
@@ -97,7 +80,7 @@ h2 {
 	display: none;
 }
 
-input, textarea { 
+input { 
 	outline: none;
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
@@ -107,14 +90,14 @@ input, textarea {
 	font-size: 1.2em;
 }
 
-input[type="text"], textarea {
+input[type="text"]{
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 	border-style: none none solid;
 	color: #FFFFFF;
 	height: 50px;
 }
 
-textarea {
+input[type="text"]:first-of-type{
 	width: 100%;
 	resize: none;
 	overflow: hidden;
@@ -154,11 +137,11 @@ input[type=submit]:active {
   border-bottom: 4px solid #384B6B;
 }
 
-input:invalid, textarea:invalid { 
+input:invalid { 
 	box-shadow: none; 
 }
 
-input[type="text"]:focus, textarea:focus, input[type="text"]:invalid:focus, textarea:invalid:focus { 
+input[type="text"]:focus, input[type="text"]:invalid:focus { 
 	box-shadow: 0 5px 7px -5px rgba(255, 255, 255, 1); 
 }
 
