@@ -17,11 +17,11 @@ entice customers. It says that you respect them and value their time enough to b
 <%= form_for @headline, :remote => true, :authenticity_token => true, :html => { :data_type => 'json' } do |f| %>
  
   <div class="row">
-  <div class="field col-md-10">
+  <div class="field col-md-9">
     <%= f.text_field :content, :required => true, :placeholder => 'Your powerful headline' %>
     <span id="theCounter"></span>
   </div>
-  <div class="field col-md-2">
+  <div class="field col-md-3">
     <%= f.text_field :company, :required => true, :placeholder => 'Company or product' %>
   </div>
   </div>
