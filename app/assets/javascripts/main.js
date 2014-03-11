@@ -28,7 +28,7 @@ $(function(){
 		$('#theCounter').textCounter({
 			target: '#headline_content',
 			count: 100,
-			warnAt: 10
+			warnAt: 0
 		});
 	});
 
