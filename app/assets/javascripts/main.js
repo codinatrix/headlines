@@ -7,8 +7,7 @@ $(document)
 		var company = $(this).find('#headline_company').val();
 		
 		var li = $("ul").children(":first").clone();
-		li.children(":first").text(content).append('<br />');
-		li.children(":last").text('-' + company);
+		li.children(":last").text(company);
 		
 		last_li = $("ul").children(":last");
 		last_li.remove();
