@@ -19,6 +19,7 @@ entice customers. It says that you respect them and value their time enough to b
   <div class="row">
   <div class="field col-md-10">
     <%= f.text_area :content, :required => true, :placeholder => 'Your powerful headline', :rows => 1 %>
+    <span id="theCounter"></span>
   </div>
   <div class="field col-md-2">
     <%= f.text_field :company, :required => true, :placeholder => 'Company or product' %>
@@ -29,7 +30,7 @@ entice customers. It says that you respect them and value their time enough to b
   </div>
 <% end %>
 
-
+<%= paginate @headlines %>
 <ul>
 <% @headlines.each do |headline| %>
 	<%= render headline %>
