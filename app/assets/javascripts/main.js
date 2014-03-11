@@ -1,11 +1,14 @@
 $(document)
 	.delegate('form[data-remote]', 'ajax:beforeSend', function(){
+		
 		$(".alert").fadeTo(200, 0);
-	})
-	.delegate('form[data-remote]', 'ajax:success', function(e, data, status, xhr){
+		
+		var content = $(this).find('#headline_content').val();
+		var company = $(this).find('#headline_company').val();
+		
 		var li = $("ul").children(":first").clone();
-		li.children(":first").text(data['content']);
-		li.children(":last").text('-' + data['company']);
+		li.children(":first").text(content).append('<br />');
+		li.children(":last").text('-' + company);
 		
 		last_li = $("ul").children(":last");
 		last_li.remove();
@@ -24,6 +27,11 @@ $(document)
 		else {
 			error_el.text("Oh no! We're having technical difficulties right now.");
 		}
+		
+		first_li = $("ul").children(":first");
+		
+		first_li.remove();
+		
 		$(".alert").fadeTo(200, 1);
 
 	});
