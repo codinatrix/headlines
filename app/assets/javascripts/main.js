@@ -14,10 +14,15 @@ $(document)
 	})
 	.delegate('form[data-remote]', 'ajax:error', function(e, data, status, error) {
 		var error_el = $(".alert").first();
-		var response = $.parseJSON(data.responseText)['errors'];
-		for(var key in response) {
-			error_el.text('Headline ' + response[key]);
-			break;
+		if (data.status == 422)  {
+			var response = $.parseJSON(data.responseText)['errors'];
+			for(var key in response) {
+				error_el.text('Headline ' + response[key]);
+				break;
+			}
+		}
+		else {
+			error_el.text("Oh no! We're having technical difficulties right now.");
 		}
 		$(".alert").fadeTo(200, 1);
 
