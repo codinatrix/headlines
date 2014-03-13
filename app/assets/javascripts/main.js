@@ -3,11 +3,16 @@ $(document)
 		
 		$(".alert").fadeTo(200, 0);
 		
-		var content = $(this).find('#headline_content').val();
-		var company = $(this).find('#headline_company').val();
+		var content = $(this).find('#headline_content');
+		var company = $(this).find('#headline_company');
+		var content_text = content.val();
+		var company_text = company.val();
+		content.val('');
+		company.val('');
 		
 		var li = $("ul").children(":first").clone();
-		li.children(":last").text(company);
+		li.children(":first").text(content_text);
+		li.children(":last").text(company_text);
 		
 		last_li = $("ul").children(":last");
 		last_li.remove();
