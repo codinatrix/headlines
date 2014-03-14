@@ -248,6 +248,8 @@ li a:hover, li a:focus {
 .alert {
 	display: inline;
 	height: 178px;
+	position: relative;
+	top: -10px;
 }
 
 .pagination_wrap:first-of-type {
