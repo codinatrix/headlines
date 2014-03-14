@@ -50,4 +50,8 @@ $(function(){
 	});
 
 
-
+function goTop() {
+	$('html, body').animate({
+        scrollTop: $(".pagination_wrap").offset().top
+    }, 300);
+}
