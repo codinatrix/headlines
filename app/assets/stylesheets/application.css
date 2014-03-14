@@ -36,8 +36,12 @@ body {
 	background-repeat: no-repeat;
 }
 
+a:hover, a:focus {
+	text-decoration: none;
+}
+
 h2, input {
-	font: 'Muli', Verdana, Helvetica, sans-serif;
+	font-family: 'Muli', Verdana, Helvetica, sans-serif;
 }
 
 .hideme {
@@ -213,6 +217,27 @@ ul {
 li {
 	margin-bottom: 24px;
 	text-shadow: 2px 1px 2px #000000;
+}
+
+li a {
+	color: #EBFFFF;
+	font-family: 'Muli', Verdana, Helvetica, sans-serif;
+	font-weight: bold;
+	text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+
+li a span {
+	border-bottom: 1px dotted #EBFFFF;
+}
+
+li a span:hover, li a span:focus {
+	text-shadow: none;
+	border-bottom: 1px dotted #CCC;
+	color: #CCC;
+}
+
+li a:hover, li a:focus {
+    color: #EBFFFF;
 }
 
 .company_name {
