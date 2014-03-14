@@ -6,6 +6,7 @@ class Headline < ActiveRecord::Base
   validates :content, :company, presence: true
   validates_length_of :content, :maximum => 100
   validates_length_of :company, :maximum => 100
+  validates_length_of :link, :maximum => 500
   
   after_create :send_email
   

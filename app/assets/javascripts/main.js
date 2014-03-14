@@ -5,10 +5,13 @@ $(document)
 		
 		var content = $(this).find('#headline_content');
 		var company = $(this).find('#headline_company');
+		var link = $(this).find('#headline_link');
 		var content_text = content.val();
 		var company_text = company.val();
+		var link_text = link.val();
 		content.val('');
 		company.val('');
+		link.val('');
 		
 		var li = $("ul").children(":first").clone();
 		li.children(":first").text(content_text);

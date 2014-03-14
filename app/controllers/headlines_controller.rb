@@ -29,6 +29,6 @@ class HeadlinesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def headline_params
-      params.require(:headline).permit(:content, :company)
+      params.require(:headline).permit(:content, :company, :link)
     end
 end
