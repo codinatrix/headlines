@@ -1,0 +1,2 @@
+$('ul').html('<%= escape_javascript render(@headlines) %>');
+$('#pagination_wrap').html('<%= escape_javascript(paginate(@headlines, :remote => true).to_s) %>');
