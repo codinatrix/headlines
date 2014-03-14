@@ -5,6 +5,11 @@ class HeadlinesController < ApplicationController
   def index
     @headlines = Headline.all.page(params[:page]).per(10)
     @headline = Headline.new
+    
+    respond_to do |format|
+      format.js
+      format.html
+    end
   end
 
     # GET /headlines/new
