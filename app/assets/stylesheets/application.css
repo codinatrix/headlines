@@ -60,6 +60,33 @@ body {
    opacity: 1;
 }
 
+#logo {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+}
+
+#mol {
+	color: #FFFEE4;
+	position: absolute;
+	top: 10px;
+	left: 25px;
+	font-family: 'Source Sans Pro',sans-serif;
+	text-shadow: -1px 1px 1px #000, 1px -1px 1px #000;
+	font-weight: 300;
+	text-decoration: none;
+	
+	 -webkit-transition: all 0.3s ease-in; /*Safari & Chrome*/
+   transition: all 0.3s ease-in;
+   -moz-transition: all 0.3s ease-in; /* Firefox 4 */
+   -o-transition: all 0.3s e
+}
+
+#mol:hover, #mol:focus
+{
+	text-shadow: -1px 1px 8px #afc, 1px -1px 8px #aff;
+}
+
 .container:first-of-type {
 	margin-top: 100px;
 }
@@ -186,4 +213,8 @@ li {
     border-top: 1px solid #363636;
     outline: 1px solid #171717;
     color: #AAA;
+}
+
+#footer a {
+    color: #CCC;
 }
