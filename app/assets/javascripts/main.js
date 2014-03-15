@@ -22,6 +22,7 @@ $(document)
 	})
 	.delegate('form[data-remote]', 'ajax:success', function(){
 		$('form')[0].reset();
+		$('#theCounter').text('100');
 	})
 	.delegate('form[data-remote]', 'ajax:error', function(e, data, status, error) {
 		var error_el = $(".alert").first();
