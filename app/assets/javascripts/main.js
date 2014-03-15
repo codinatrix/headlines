@@ -71,3 +71,8 @@ function goTop() {
         scrollTop: $(".pagination_wrap").offset().top
     }, 300);
 }
+
+$(document).ready(function(){
+   var tooltip = $('#page_desc').text();
+   $('#why').tooltip({ content: tooltip });
+});
