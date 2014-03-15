@@ -75,4 +75,9 @@ function goTop() {
 $(document).ready(function(){
    var tooltip = $('#page_desc').text();
    $('#why').tooltip({ content: tooltip });
+   $('#why').click(function(e) {
+   		e.preventDefault();
+   		$('#why').tooltip({ content: tooltip });
+   });
 });
+
