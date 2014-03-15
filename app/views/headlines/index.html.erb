@@ -21,17 +21,17 @@ Your headline makes or breaks your website.<br> Browse some great examples or sh
  
   <div class="row" id="first_row">
 	  <div class="field col-md-12">
-	    <%= f.text_field :content, :required => true, :placeholder => 'Your website\'s headline' %>
+	    <%= f.text_field :content, :required => true, :placeholder => 'Your website\'s headline', :autocomplete => 'off' %>
 	    <span id="theCounter"></span>
 	  </div>
   </div>
   
   <div class="row">
 	  <div class="field col-md-3 col-md-offset-2">
-	    <%= f.text_field :company, :required => true, :placeholder => 'Company or product name', :maxlength => 100 %>
+	    <%= f.text_field :company, :required => true, :placeholder => 'Company or product name', :maxlength => 100, :autocomplete => 'off' %>
 	  </div>
 	  <div class="field col-md-6">
-	    <%= f.text_field :link, :required => true, :placeholder => 'Link to your home page', :maxlength => 500 %>
+	    <%= f.text_field :link, :required => true, :placeholder => 'Link to your home page', :maxlength => 500, :autocomplete => 'off' %>
 	  </div>
   </div>
   <div class="actions">
