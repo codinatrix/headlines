@@ -87,6 +87,9 @@ function fixLink(link) {
 	    if (link.substring(0, 4) !== 'http') {
             return "http://" + link;
         }
+        else {
+        	return link;
+        }
 }
 
 $(document).ready(function(){
@@ -102,7 +105,7 @@ $(document).ready(function(){
    //Overrides the ajax submit so that I can put 'http' in front of the link
    //This is messy. Here be code debt. Issue added on Github.
    $.rails.ajax = function(options) {
-	   options['data'][4]['value'] = 'http://' + options['data'][4]['value'];
+	   options['data'][4]['value'] = fixLink(options['data'][4]['value']);
 	   return $.ajax(options);
 	};
 });
