@@ -103,9 +103,11 @@ $(document).ready(function(){
    });
    
    //Overrides the ajax submit so that I can put 'http' in front of the link
-   //This is messy. Here be code debt. Issue added on Github.
+   //This is messy. I'm basically hacking Rails magic instead of doing it myself. Issue added on Github.
    $.rails.ajax = function(options) {
-	   options['data'][4]['value'] = fixLink(options['data'][4]['value']);
+	   if (options['data']){ //Checks to see if it's the form submit and not the pagination (Hacky and bad)
+	   		options['data'][4]['value'] = fixLink(options['data'][4]['value']);
+	   }
 	   return $.ajax(options);
 	};
 });
